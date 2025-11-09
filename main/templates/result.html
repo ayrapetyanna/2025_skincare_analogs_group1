@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Cosmotwin — Ваш аналог</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            padding-bottom: 80px; /* Добавлено для футера */
+        }
+
+        /* Шапка */
+        header {
+            width: 100%;
+            background-color: #fdd2e8;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            color: #ff60ba;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .login-btn {
+            background-color: #ff60ba;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .login-btn:hover {
+            background-color: #ff7cc9;
+        }
+
+        /* Основной блок */
+        .main {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fdd2e8;
+            border-radius: 20px;
+            padding: 40px 50px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .main img {
+            width: 260px;
+            height: auto;
+            border-radius: 15px;
+            flex-shrink: 0;
+        }
+
+        .text-block {
+            flex: 1;
+        }
+
+        .text-block h2 {
+            margin-top: 0;
+            color: #ff60ba;
+        }
+
+        .text-block h3 {
+            color: #ff60ba;
+            margin-bottom: 10px;
+        }
+
+        .text-block p {
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        .fav-btn {
+            background-color: #ff60ba;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 12px 25px;
+            margin-top: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .fav-btn:hover {
+            background-color: #ff7cc9;
+        }
+
+        /* Футер */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: right;
+            padding: 20px 50px;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+            height: 80px;
+        }
+
+        .footer-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            position: relative;
+            height: 100%;
+        }
+
+        .footer-text {
+            position: absolute;
+            right: 180px;
+            top: 25px;
+            font-size: 20px;
+            font-family: Arial;
+        }
+
+        .footer-year {
+            position: absolute;
+            right: 60px;
+            top: 25px;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cosmotwin</h1>
+        <a href="{% url 'login' %}" class="login-btn">Вход</a>
+    </header>
+
+    <div class="main">
+        <img src="https://static.insales-cdn.com/images/products/1/7892/454994404/large_Dual_Barrier_Creamy_Toner.jpg" alt="Аналог">
+        <div class="text-block">
+            <h2>Ваш аналог:</h2>
+            <h3>celimax Dual Barrier тонер</h3>
+            <p>
+                Серия средств Dual Barrier специально разработана для ухода за сухой и чувствительной кожей.
+                При ослабленном или повреждённом роговом слое кожа испытывает стресс, становится уязвимой для внешних раздражителей,
+                появляется чувствие стянутости и зуда.
+            </p>
+            <p>
+                Dual Barrier Mild Creamy Toner направленно работает с гиперчувствительностью кожи, активно увлажняет,
+                придаёт здоровое сияние и делает кожу мягкой и шелковистой.
+            </p>
+            <a href="{% url 'favorites' %}" class="fav-btn">Добавить в избранное</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">by cosmotwin</div>
+            <div class="footer-year">2025</div>
+        </div>
+    </footer>
+
+</body>
+</html>

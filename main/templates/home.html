@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Cosmotwin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .main-btn {
+      margin-top: 40px;
+      background: #FDD2E8;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 15px 40px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .main-btn:hover {
+      background-color: #FF60BA;
+    }
+    footer {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      color: #666;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div style="width: 100%; height: 100px; position: relative; background: #FDD2E8; overflow: hidden">
+    <div style="width: 177px; height: 53px; padding-left: 38px; padding-right: 38px; right: 50px; top: 23px; position: absolute; background: #FF60BA; border-radius: 20px; display: flex; justify-content: center; align-items: center;">
+
+      <a href="{% url 'login' %}" style="color: white; font-size: 24px; font-family: Arial; font-weight: 500; text-decoration: none;">Вход</a>
+    </div>
+    <div style="left: 49px; top: 27px; position: absolute; color: #FF60BA; font-size: 36px; font-family: Arial; font-weight: bold;">Cosmotwin</div>
+  </div>
+
+  <main>
+    <h2 style="color: #FF60BA; margin-top: 120px;">Российские аналоги<br>зарубежной косметики</h2>
+    <a href="{% url 'analogs' %}">
+      <button class="main-btn">Подобрать аналог</button>
+    </a>
+  </main>
+
+  <footer style="width: 100%; height: 80px; background: #333; color: white; position: fixed; bottom: 0; left: 0;">
+    <div style="max-width: 1440px; margin: 0 auto; position: relative; height: 100%;">
+      <div style="position: absolute; right: 180px; top: 25px; font-size: 20px; font-family: Arial;">by cosmotwin</div>
+      <div style="position: absolute; right: 60px; top: 25px; font-size: 20px; font-family: Arial;">2025</div>
+    </div>
+  </footer>
+  
+
+</body>
+</html>
+

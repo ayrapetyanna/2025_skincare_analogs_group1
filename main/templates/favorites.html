@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Избранное — Cosmotwin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      width: 100%;
+      height: 100px;
+      background: #FDD2E8;
+      position: relative;
+    }
+    header .brand {
+      position: absolute;
+      left: 50px;
+      top: 30px;
+      color: #FF60BA;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    header .login-btn {
+      position: absolute;
+      right: 40px;
+      top: 25px;
+      background: #FF60BA;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 25px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    header .login-btn:hover {
+      background-color: #ff7ec2;
+    }
+
+    .fav-btn {
+      background: #FF60BA;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 40px;
+      margin-top: 40px;
+      cursor: pointer;
+    }
+    .fav-btn:hover {
+      background: #ff7ec2;
+    }
+
+    .favorites-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .fav-item {
+      border: 2px solid #FFB6D9;
+      border-radius: 15px;
+      width: 180px;
+      padding: 15px;
+      background: #fff;
+      transition: transform 0.2s;
+    }
+    .fav-item:hover {
+      transform: scale(1.05);
+    }
+    .fav-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .fav-name {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #FF60BA;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      color: #666;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Cosmotwin</div>
+    <a href="{% url 'login' %}"><button class="login-btn">Вход</button></a>
+  </header>
+
+  <button class="fav-btn">Избранное</button>
+
+  <div class="favorites-grid">
+    <div class="fav-item">
+      <img src="/static/images/toner.png" alt="Тонер">
+      <div class="fav-name">celimax Dual Barrier тонер</div>
+    </div>
+    <div class="fav-item">
+      <img src="/static/images/toner.png" alt="Тонер">
+      <div class="fav-name">celimax Dual Barrier тонер</div>
+    </div>
+    <div class="fav-item">
+      <img src="/static/images/toner.png" alt="Тонер">
+      <div class="fav-name">celimax Dual Barrier тонер</div>
+    </div>
+    <div class="fav-item">
+      <img src="/static/images/toner.png" alt="Тонер">
+      <div class="fav-name">celimax Dual Barrier тонер</div>
+    </div>
+  </div>
+
+  <footer>
+    by cosmotwin<br>2025
+  </footer>
+
+</body>
+</html>
